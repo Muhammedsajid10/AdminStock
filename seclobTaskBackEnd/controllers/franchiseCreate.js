@@ -1,6 +1,6 @@
 import franchiseModel from '../models/franchise.js'
 
-const createFranchise = async (req, res) => {
+const  createFranchise = async (req, res) => {
     const getId = req.params.id; 
     
     if (req.method === 'POST') {

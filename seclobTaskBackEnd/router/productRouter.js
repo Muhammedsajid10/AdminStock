@@ -49,7 +49,7 @@ productRouter.route('/products')
     .post(createProduct) 
     .get(createProduct); 
 
-productRouter.route('/products/:id')   
+productRouter.route('/productssss/:id')   
     .get(createProduct)  
     .put(createProduct)  
     .delete(createProduct); 

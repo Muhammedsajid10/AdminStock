@@ -1183,10 +1183,10 @@ const Products = () => {
     subProducts: [],
   });
   const [products, setProducts] = useState([]);
-  const [Name, setName] = useState([]); // to store category names
-  const [subProductOptions, setSubProductOptions] = useState([]); // to store sub-product options
+  const [Name, setName] = useState([]);                                                                                         // to store category names
+  const [subProductOptions, setSubProductOptions] = useState([]);                                                       // to store sub-product options
   const [error, setError] = useState('');
-  const [currentPage, setCurrentPage] = useState(1); //current page traking
+  const [currentPage, setCurrentPage] = useState(1);                                                             //current page traking
   const productsPerPage = 3; 
   const navigate = useNavigate();
 
@@ -1429,7 +1429,7 @@ const Products = () => {
 
 
             <h5>Sub-Products</h5>
-            {formData.subProducts.map((subProduct, index) => (
+            {formData.subProducts.map((subProduct, index) => ( 
               <div key={index} className="mb-3">
                 <Form.Group controlId={`subProduct_${index}`}>
                   <Form.Label>Sub-Product</Form.Label>

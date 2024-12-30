@@ -21,6 +21,9 @@ const Pages = () => {
                 Password: formData.Password,
             });
 
+            
+            
+
             console.log(response.data);
             
 

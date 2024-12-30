@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../Header';
 import Sidebar from '../Sidebar';
 
+
 const Layout = ({ children, openSidebarToggle, OpenSidebar }) => {
   return (
     <div style={{ display: 'flex', height: '100vh', width: '100%' }}>

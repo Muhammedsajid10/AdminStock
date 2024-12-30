@@ -59,7 +59,7 @@ const Franchise = () => {
         setNewFranchise({ Name: franchise.Name }); 
         setShowModal(true); 
     };
-
+                        
     // Handle the form submission for updating the franchise
     const handleUpdateFranchise = async () => {
         try {
@@ -70,10 +70,10 @@ const Franchise = () => {
                 }
             });
             // Update the local state with the updated franchise
-            setName((prev) =>
+            setName((prev) => 
                 prev.map((franchise) =>
                     franchise._id === currentFranchise._id ? { ...franchise, Name: newFranchise.Name } : franchise
-                )
+                ) 
             );
             setShowModal(false); 
             setNewFranchise({ Name: '' }); 
@@ -90,10 +90,10 @@ const Franchise = () => {
     // Add new franchise
     const handleAddFranchise = async () => {
         try {
-            const authToken = getauthToken();
+            const sameena = getauthToken();
             const response = await axios.post('http://localhost:3000/fran/franchise', newFranchise, {
                 headers: {
-                    Authorization: `Bearer ${authToken}`
+                    Authorization: `Bearer ${sameena}`
                 }
             });
             setName([...Name, response.data]); // Update state with new franchise
@@ -130,6 +130,7 @@ const Franchise = () => {
                         </Form.Group>
                         {error && <p style={{ color: 'red' }}>{error}</p>}
                     </Form>
+                    
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShowModal(false)}>
